@@ -19,7 +19,7 @@ Tests are always important but they were not included
 
 Links on edition could have been modularized. I've struggled a little bit with local variables and then kept it repeated
 
-## Pitfails
+## Pitfalls
 Struggled with lack of documentation of OAuth library
 
 
