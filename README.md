@@ -24,8 +24,9 @@ Struggled with lack of documentation of OAuth library
 
 
 ## Further considerations
-..* Using a cache would be a good idea for common read-only requests. It takes a long time asking for data through htto
-..* I didn't feel confident enough of implementing a HATEOAS client. For long-term solutions brings easier modeling + request lifecicle
+Using a cache would be a good idea for common read-only requests. It takes a long time asking for data through http
+
+I didn't feel confident enough of implementing a HATEOAS client. For long-term solutions brings easier modeling + request lifecicle
 
 ## Thanks for checking this code!
 
