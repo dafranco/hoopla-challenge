@@ -1,0 +1,6 @@
+<%= form_tag(metric_metric_values_path, method:'post') do |form| %>
+  <%= hidden_field_tag(:user, @user) %>
+  <%= label_tag(:value, 'New value')%>
+  <%= text_field_tag(:value) %>
+  <%= submit_tag("Update") %>
+<% end %>

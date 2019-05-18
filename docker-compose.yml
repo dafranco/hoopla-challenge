@@ -1,0 +1,19 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+  web:
+    environment: 
+      - CLIENT_ID=99867efb-5740-4ec8-9e5b-960f96f862d6
+      - CLIENT_SECRET=bdd18037d5243d048cdeeffe8157a4a31cc4442da360
+      - HOOPLA_BASE_URL=https://api.hoopla.net
+    build: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - .:/myapp
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db

@@ -1,0 +1,6 @@
+<h1>Metrics</h1>
+<ul>
+  <% @metrics.each do |metric| %>
+    <li><p> <%= link_to metric['name'], metric_metric_values_path(get_id_from_href(metric['href']))%> </li>
+  <% end %>
+</ul>

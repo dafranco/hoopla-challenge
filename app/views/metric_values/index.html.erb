@@ -1,0 +1,12 @@
+<h1>Values</h1>
+<ul>
+  <% @user_values.each do |user| %>
+    <li> 
+    <% if user['metric_value']%>
+      <p> <%= link_to "#{user['first_name']} #{user['last_name']} #{user['metric_value']['value']}", edit_metric_metric_value_path(id: get_id_from_href(user['metric_value']['href']))%> </p>
+    <% else %>
+      <p> <%=link_to "#{user['first_name']} #{user['last_name']} ", new_metric_metric_value_path(user: user['href'])%></p>
+    <% end %>
+    </li>
+  <% end %>
+</ul>
